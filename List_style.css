@@ -1,0 +1,61 @@
+body {
+    font-family :'Courier New', Courier, monospace;
+    text-underline-position: below;
+}
+
+h1 {
+    color: #4c4c4cce;
+}
+
+.task-list {
+    display :flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.task {
+    background-color:rgb(0, 217, 255);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-decoration-color: black;
+}
+
+@media(min-width: 768px) {
+    .task {
+        width: 50%
+}
+}
+
+@media(min-width : 1024px) {
+    .task {
+        width: 33.33%;
+    }
+}
+
+.task-list {
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: chartreuse;
+}
+input[type=text] {
+    width: 90%;
+    height: 3vw;
+}
+
+.task {
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    top: -10px;
+}
