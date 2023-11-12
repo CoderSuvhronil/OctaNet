@@ -1,0 +1,117 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color:color-mix(in hsl increasing hue, #3498db 50%, #2ecc71, 50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#todo-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#todo-header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#todo-list {
+  padding: 20px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  background-color: #f9f9f9;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item.completed {
+  background-color: #f0f0f0;
+  text-decoration: line-through;
+  opacity: 0.7;
+  transform: translateX(-20px);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#add-todo {
+  display: flex;
+  padding: 20px;
+  background-color: #eee;
+  transition: background-color 0.3s;
+}
+
+#add-todo input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#add-todo button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-todo button:hover {
+  background-color: #27ae60;
+}
+
+/* Previous styles remain unchanged */
+
+#delete-all-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#delete-all {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#delete-all:hover {
+  background-color: #c0392b;
+}
